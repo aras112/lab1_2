@@ -4,7 +4,7 @@ import pl.com.bottega.ecommerce.sales.domain.productscatalog.ProductType;
 
 import java.math.BigDecimal;
 
-public class TaxCalculatorImpl implements TaxCalculator {
+public class DefaultTaxCalculatorImpl implements TaxCalculator {
 
     @Override public TaxInfoForCountry calculate(ProductType productType) {
         TaxInfoForCountry taxInfoForCountry = new TaxInfoForCountry();
