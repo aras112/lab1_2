@@ -16,6 +16,11 @@ public class DefaultTaxCalculatorImplTest {
         TaxInfoForCountry taxInfo = defaultTaxCalculator.calculate(ProductType.DRUG);
         Assert.assertThat(taxInfo.getRatio(), is(new BigDecimal("0.05")));
     }
+    @Test public void simple2UseCalculate() {
+        DefaultTaxCalculatorImpl defaultTaxCalculator = new DefaultTaxCalculatorImpl();
+        TaxInfoForCountry taxInfo = defaultTaxCalculator.calculate(ProductType.FOOD);
+        Assert.assertThat(taxInfo.getRatio(), is(new BigDecimal("0.07")));
+    }
 
     @Test(expected = IllegalArgumentException.class) public void calculateIncorrectProductType() {
         DefaultTaxCalculatorImpl defaultTaxCalculator = new DefaultTaxCalculatorImpl();

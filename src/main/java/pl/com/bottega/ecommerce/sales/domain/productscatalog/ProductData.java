@@ -17,7 +17,7 @@ import java.util.Date;
 import pl.com.bottega.ecommerce.canonicalmodel.publishedlanguage.Id;
 import pl.com.bottega.ecommerce.sharedkernel.Money;
 
-public class ProductData {
+public class  ProductData {
 
     private Id productId;
     private Money price;
